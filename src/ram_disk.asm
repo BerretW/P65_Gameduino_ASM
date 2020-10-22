@@ -1,7 +1,6 @@
           .include "io.inc65"
 					.include "ewoz.asm"
 
-
           .autoimport	on
         	.case		on
         	.debuginfo	off
@@ -16,10 +15,12 @@
 					.import _acia_puts
 					.import _lcd_w_reg
 					.import _acia_put_newline
-
+          .import _print_f
 
 					.export _print_help
 					.export _bootloader_
+
+radek = tmp4
 
 					.segment "RODATA"
 msg_0:			.byte "APPARTUS P65 Bootloader", $00
@@ -43,26 +44,11 @@ msg_12:			.byte "Cekam na data do BANK!", $00
 _bootloader_:	JSR _acia_put_newline
 				LDA #<(msg_0)
 				LDX #>(msg_0)
-				JSR _acia_puts
-				JSR _acia_put_newline
-        lda     #$00
-        jsr     pusha
-        lda     #$09
-        jsr     pusha
-        LDA #<(msg_0)
-        LDX #>(msg_0)
-        JSR _GD_putstr
+        JSR _print_f
+
 				LDA #<(msg_2)
 				LDX #>(msg_2)
-				JSR _acia_puts
-				JSR _acia_put_newline
-        lda     #$00
-        jsr     pusha
-        lda     #$0A
-        jsr     pusha
-        LDA #<(msg_2)
-        LDX #>(msg_2)
-        JSR _GD_putstr
+        JSR _print_f
 
 _loop:			JSR _acia_getc
 
@@ -147,42 +133,34 @@ _switch_b7: LDA #7
             STA $CE00
             JMP _loop
 
-_print_help:	LDA #<(msg_3)
-				LDX #>(msg_3)
-				JSR _acia_puts
-				JSR _acia_put_newline
+_print_help:
+                LDA #<(msg_3)
+				        LDX #>(msg_3)
+JSR _print_f
 				LDA #<(msg_4)
 				LDX #>(msg_4)
-				JSR _acia_puts
-				JSR _acia_put_newline
+JSR _print_f
 				LDA #<(msg_5)
 				LDX #>(msg_5)
-				JSR _acia_puts
-				JSR _acia_put_newline
+JSR _print_f
 				LDA #<(msg_6)
 				LDX #>(msg_6)
-				JSR _acia_puts
-				JSR _acia_put_newline
+JSR _print_f
 				LDA #<(msg_7)
 				LDX #>(msg_7)
-				JSR _acia_puts
-				JSR _acia_put_newline
+JSR _print_f
 				LDA #<(msg_8)
 				LDX #>(msg_8)
-				JSR _acia_puts
-				JSR _acia_put_newline
+JSR _print_f
 				LDA #<(msg_9)
 				LDX #>(msg_9)
-				JSR _acia_puts
-				JSR _acia_put_newline
+JSR _print_f
 				LDA #<(msg_10)
 				LDX #>(msg_10)
-				JSR _acia_puts
-				JSR _acia_put_newline
+JSR _print_f
         LDA #<(msg_11)
         LDX #>(msg_11)
-        JSR _acia_puts
-        JSR _acia_put_newline
+JSR _print_f
 				JMP _loop
 
 

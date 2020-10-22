@@ -1,6 +1,24 @@
 .export _radek
 .export _print_f
-
+.setcpu		"6502"
+.smart		on
+.autoimport	on
+.case		on
+.debuginfo	off
+.importzp	sp, sreg, regsave, regbank
+.importzp	tmp1, tmp2, tmp3, tmp4, ptr1, ptr2, ptr3, ptr4
+.macpack	longbranch
+.forceimport	__STARTUP__
+.import		_acia_putc
+.import		_acia_puts
+.import		_acia_put_newline
+.import		_acia_getc
+.import		_GD_Init
+.import		_GD_fill
+.import		_GD_wr16
+.import		_GD_putstr
+.import		_GD_putchar
+.import		_GD_copy
 
 .segment	"DATA"
 _radek:
