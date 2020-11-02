@@ -5,10 +5,10 @@
 
 ;SPI registerss
 
-SPI_DATA   = $CE00
-SPI_CSSEL		=	$CE03
-SPI_STATUS	=	$CE01
-SPI_DIV     = $CE02
+SPI_DATA   = $C000
+SPI_CSSEL		=	$C003
+SPI_STATUS	=	$C001
+SPI_DIV     = $C002
 SPI_CS			= 7			;CS0 = 14, CS1=13, CS2=11, CS3=7
 
 data = tmp1

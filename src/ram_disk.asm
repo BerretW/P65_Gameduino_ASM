@@ -25,7 +25,7 @@ radek = tmp4
 					.segment "RODATA"
 msg_0:			.byte "APPARTUS P65 Bootloader", $00
 msg_1:			.byte "Cekam na data", $00
-msg_2:			.byte "Pro napovedu stiskni H Prikazy posilej bez CR LF.", $00
+msg_2:			.byte "Pro napovedu stiskni H, bez CR LF.", $00
 msg_3:			.byte "w = kazdy nasledujici byte zapise do pameti na pozici h6000 - h7FFF. Po prijeti vsech bytu se novy program spusti z pameti.", $00
 msg_4:			.byte "r = posle na seriovou linku data z pameti h6000 - h7FFF.", $00
 msg_6:			.byte "m = spusti EWOZ Monitor.", $00

@@ -1,4 +1,4 @@
-				.setcpu "65C02"
+				.setcpu "6502"
 				.include "io.inc65"
 				.import _GD_Init
 				.import _GD_ascii
@@ -48,9 +48,10 @@ irq:            SEI
 								RTI
 
 
-_main:						CLI
+_main:					CLI
 								JSR _GD_Init
 								JSR _acia_init
+								JSR _lcd_init
 								JMP _bootloader_
 
 

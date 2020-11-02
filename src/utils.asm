@@ -46,8 +46,11 @@ _radek:
 	bne     L0002
 	inc     _radek+1
 L0002:	jsr     _acia_put_newline
-	jsr     ldax0sp
-	jsr     _acia_puts
-	jmp     incsp2
+jsr     ldax0sp
+jsr     _acia_puts
+jsr     ldax0sp
+jsr     _lcd_puts
+jsr     _lcd_put_newline
+jmp     incsp2
 
 .endproc

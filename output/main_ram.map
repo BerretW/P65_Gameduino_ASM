@@ -84,53 +84,53 @@ Segment list:
 Name                   Start     End    Size  Align
 ----------------------------------------------------
 ZEROPAGE              000000  00001A  00001B  00001
-BSS                   000200  000200  000001  00001
-DATA                  008000  008336  000337  00001
-STARTUP               008337  008352  00001C  00001
-ONCE                  008353  00835E  00000C  00001
-CODE                  008500  009001  000B02  00001
-RODATA                009002  0092DC  0002DB  00001
-VECTORS               00BFFA  00BFFF  000006  00001
+DATA                  000200  000536  000337  00001
+BSS                   000537  000537  000001  00001
+STARTUP               006337  006352  00001C  00001
+ONCE                  006353  00635E  00000C  00001
+CODE                  00635F  006E60  000B02  00001
+RODATA                006E61  00713B  0002DB  00001
+VECTORS               007FFA  007FFF  000006  00001
 
 
 Exports list by name:
 ---------------------
-_GD_Init                  0089B2 RLA    _GD_putstr                008BB1 RLA    
-__BSS_RUN__               000200 RLA    __BSS_SIZE__              000001 REA    
-__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     008353 RLA    
-__DATA_LOAD__             008000 RLA    __DATA_RUN__              008000 RLA    
+_GD_Init                  006811 RLA    _GD_putstr                006A10 RLA    
+__BSS_RUN__               000537 RLA    __BSS_SIZE__              000001 REA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     006353 RLA    
+__DATA_LOAD__             006000 RLA    __DATA_RUN__              000200 RLA    
 __DATA_SIZE__             000337 REA    __DESTRUCTOR_COUNT__      000000 REA    
-__DESTRUCTOR_TABLE__      008353 RLA    __RAM_SIZE__              007DFF REA    
+__DESTRUCTOR_TABLE__      006353 RLA    __RAM_SIZE__              005DFF REA    
 __RAM_START__             000200 RLA    __STARTUP__               000001 REA    
-_acia_getc                008981 RLA    _acia_init                008941 RLA    
-_acia_put_newline         008979 RLA    _acia_putc                00894E RLA    
-_acia_puts                00895E RLA    _bootloader_              008758 RLA    
-_init                     008337 RLA    _irq_int                  008E0C RLA    
-_lcd_init                 008E17 RLA    _lcd_put_newline          008E3A RLA    
-_lcd_puts                 008E7F RLA    _main                     008516 RLA    
-_nmi_int                  008E0B RLA    _print_f                  0088D8 RLA    
-_spi_begin                00892E RLA    _spi_end                  008934 RLA    
-_spi_read                 008927 RLA    _spi_write                008911 RLA    
-_spi_write_16             008918 RLA    addeq0sp                  008EA0 RLA    
-addysp                    008EB2 RLA    addysp1                   008EB1 RLA    
-aslax1                    008EBF RLA    aslax2                    008EC7 RLA    
-aslax3                    008ED2 RLA    aslax4                    008EE0 RLA    
-copydata                  008EFD RLA    decax1                    008F2A RLA    
-decsp1                    008F31 RLA    decsp2                    008F3A RLA    
-donelib                   008EF1 RLA    incax1                    008F47 RLA    
-incsp2                    008F53 RLA    incsp3                    008F61 RLA    
-incsp4                    008F66 RLA    incsp5                    008F6B RLA    
-incsp8                    008F70 RLA    initlib                   008353 RLA    
-ldax0sp                   008F75 RLA    ldaxysp                   008F77 RLA    
+_acia_getc                0067E0 RLA    _acia_init                0067A0 RLA    
+_acia_put_newline         0067D8 RLA    _acia_putc                0067AD RLA    
+_acia_puts                0067BD RLA    _bootloader_              0065B7 RLA    
+_init                     006337 RLA    _irq_int                  006C6B RLA    
+_lcd_init                 006C76 RLA    _lcd_put_newline          006C99 RLA    
+_lcd_puts                 006CDE RLA    _main                     006375 RLA    
+_nmi_int                  006C6A RLA    _print_f                  006737 RLA    
+_spi_begin                00678D RLA    _spi_end                  006793 RLA    
+_spi_read                 006786 RLA    _spi_write                006770 RLA    
+_spi_write_16             006777 RLA    addeq0sp                  006CFF RLA    
+addysp                    006D11 RLA    addysp1                   006D10 RLA    
+aslax1                    006D1E RLA    aslax2                    006D26 RLA    
+aslax3                    006D31 RLA    aslax4                    006D3F RLA    
+copydata                  006D5C RLA    decax1                    006D89 RLA    
+decsp1                    006D90 RLA    decsp2                    006D99 RLA    
+donelib                   006D50 RLA    incax1                    006DA6 RLA    
+incsp2                    006DB2 RLA    incsp3                    006DC0 RLA    
+incsp4                    006DC5 RLA    incsp5                    006DCA RLA    
+incsp8                    006DCF RLA    initlib                   006353 RLA    
+ldax0sp                   006DD4 RLA    ldaxysp                   006DD6 RLA    
 ptr1                      000009 RLZ    ptr2                      00000B RLZ    
-push0                     008FA5 RLA    pusha                     008F93 RLA    
-pusha0                    008FA7 RLA    pushax                    008FA9 RLA    
+push0                     006E04 RLA    pusha                     006DF2 RLA    
+pusha0                    006E06 RLA    pushax                    006E08 RLA    
 regsave                   000005 RLZ    sp                        000001 RLZ    
-stax0sp                   008FBF RLA    subeqysp                  008FCC RLA    
+stax0sp                   006E1E RLA    subeqysp                  006E2B RLA    
 tmp1                      000011 RLZ    tmp2                      000012 RLZ    
 tmp3                      000013 RLZ    tmp4                      000014 RLZ    
-tmpstack                  000000 RLZ    tosorax                   008F80 RLA    
-zerobss                   008FDF RLA    
+tmpstack                  000000 RLZ    tosorax                   006DDF RLA    
+zerobss                   006E3E RLA    
 
 
 Exports list by value:
@@ -141,36 +141,36 @@ __BSS_SIZE__              000001 REA    __STARTUP__               000001 REA
 regsave                   000005 RLZ    ptr1                      000009 RLZ    
 ptr2                      00000B RLZ    tmp1                      000011 RLZ    
 tmp2                      000012 RLZ    tmp3                      000013 RLZ    
-tmp4                      000014 RLZ    __BSS_RUN__               000200 RLA    
-__RAM_START__             000200 RLA    __DATA_SIZE__             000337 REA    
-__RAM_SIZE__              007DFF REA    __DATA_RUN__              008000 RLA    
-__DATA_LOAD__             008000 RLA    _init                     008337 RLA    
-__DESTRUCTOR_TABLE__      008353 RLA    initlib                   008353 RLA    
-__CONSTRUCTOR_TABLE__     008353 RLA    _main                     008516 RLA    
-_bootloader_              008758 RLA    _print_f                  0088D8 RLA    
-_spi_write                008911 RLA    _spi_write_16             008918 RLA    
-_spi_read                 008927 RLA    _spi_begin                00892E RLA    
-_spi_end                  008934 RLA    _acia_init                008941 RLA    
-_acia_putc                00894E RLA    _acia_puts                00895E RLA    
-_acia_put_newline         008979 RLA    _acia_getc                008981 RLA    
-_GD_Init                  0089B2 RLA    _GD_putstr                008BB1 RLA    
-_nmi_int                  008E0B RLA    _irq_int                  008E0C RLA    
-_lcd_init                 008E17 RLA    _lcd_put_newline          008E3A RLA    
-_lcd_puts                 008E7F RLA    addeq0sp                  008EA0 RLA    
-addysp1                   008EB1 RLA    addysp                    008EB2 RLA    
-aslax1                    008EBF RLA    aslax2                    008EC7 RLA    
-aslax3                    008ED2 RLA    aslax4                    008EE0 RLA    
-donelib                   008EF1 RLA    copydata                  008EFD RLA    
-decax1                    008F2A RLA    decsp1                    008F31 RLA    
-decsp2                    008F3A RLA    incax1                    008F47 RLA    
-incsp2                    008F53 RLA    incsp3                    008F61 RLA    
-incsp4                    008F66 RLA    incsp5                    008F6B RLA    
-incsp8                    008F70 RLA    ldax0sp                   008F75 RLA    
-ldaxysp                   008F77 RLA    tosorax                   008F80 RLA    
-pusha                     008F93 RLA    push0                     008FA5 RLA    
-pusha0                    008FA7 RLA    pushax                    008FA9 RLA    
-stax0sp                   008FBF RLA    subeqysp                  008FCC RLA    
-zerobss                   008FDF RLA    
+tmp4                      000014 RLZ    __RAM_START__             000200 RLA    
+__DATA_RUN__              000200 RLA    __DATA_SIZE__             000337 REA    
+__BSS_RUN__               000537 RLA    __RAM_SIZE__              005DFF REA    
+__DATA_LOAD__             006000 RLA    _init                     006337 RLA    
+__DESTRUCTOR_TABLE__      006353 RLA    __CONSTRUCTOR_TABLE__     006353 RLA    
+initlib                   006353 RLA    _main                     006375 RLA    
+_bootloader_              0065B7 RLA    _print_f                  006737 RLA    
+_spi_write                006770 RLA    _spi_write_16             006777 RLA    
+_spi_read                 006786 RLA    _spi_begin                00678D RLA    
+_spi_end                  006793 RLA    _acia_init                0067A0 RLA    
+_acia_putc                0067AD RLA    _acia_puts                0067BD RLA    
+_acia_put_newline         0067D8 RLA    _acia_getc                0067E0 RLA    
+_GD_Init                  006811 RLA    _GD_putstr                006A10 RLA    
+_nmi_int                  006C6A RLA    _irq_int                  006C6B RLA    
+_lcd_init                 006C76 RLA    _lcd_put_newline          006C99 RLA    
+_lcd_puts                 006CDE RLA    addeq0sp                  006CFF RLA    
+addysp1                   006D10 RLA    addysp                    006D11 RLA    
+aslax1                    006D1E RLA    aslax2                    006D26 RLA    
+aslax3                    006D31 RLA    aslax4                    006D3F RLA    
+donelib                   006D50 RLA    copydata                  006D5C RLA    
+decax1                    006D89 RLA    decsp1                    006D90 RLA    
+decsp2                    006D99 RLA    incax1                    006DA6 RLA    
+incsp2                    006DB2 RLA    incsp3                    006DC0 RLA    
+incsp4                    006DC5 RLA    incsp5                    006DCA RLA    
+incsp8                    006DCF RLA    ldax0sp                   006DD4 RLA    
+ldaxysp                   006DD6 RLA    tosorax                   006DDF RLA    
+pusha                     006DF2 RLA    push0                     006E04 RLA    
+pusha0                    006E06 RLA    pushax                    006E08 RLA    
+stax0sp                   006E1E RLA    subeqysp                  006E2B RLA    
+zerobss                   006E3E RLA    
 
 
 Imports list:
